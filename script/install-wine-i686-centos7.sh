@@ -62,6 +62,9 @@ if [[ "${vermajor}" == "1" ]]; then
 elif [[ "${vermajor}" == "2" ]]; then
   wget http://dl.winehq.org/wine/source/${verurlstr}/wine-${ver}.tar.xz -O wine-${ver}.tar.xz 2>&1 >> $log
   tar xf wine-${ver}.tar.xz 2>&1 >> $log
+elif [[ "${vermajor}" == "3" ]]; then
+  wget http://dl.winehq.org/wine/source/${verurlstr}/wine-${ver}.tar.xz -O wine-${ver}.tar.xz 2>&1 >> $log
+  tar xf wine-${ver}.tar.xz 2>&1 >> $log
 fi
 
 echo "Build wine..." 2>&1 | tee -a $log
